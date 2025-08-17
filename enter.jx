@@ -1,0 +1,8 @@
+// frontend/src/services/api.js
+export async function sendMessage(wa_id, text) {
+  await fetch("/api/send", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ wa_id, text }),
+  });
+}
